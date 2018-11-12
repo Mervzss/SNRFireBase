@@ -1,7 +1,7 @@
 import React from 'react'
 import {View , Text, StyleSheet, Image } from 'react-native'
 
-import ImagePicker from 'react-native-image-crop-picker'
+import ImagePicker from 'react-native-image-picker'
 import {SignUpButtons} from '../Button/SignUpButtons'
 export const ImageViewer = props => {
 
@@ -10,29 +10,23 @@ export const ImageViewer = props => {
      : <Text style={{fontSize:75, color:'#FA58AC'}}>?</Text>
     
      pickedImage = () =>{
-        ImagePicker.openPicker({
-            width: 300,
-            height: 400,
-            cropping: true
-          }).then(image => {
-            console.log(image);
-          });
-        // ImagePicker.showImagePicker(
-        //     {
-        //     title:'Select Your Profile Pic',
-        //     }
-        //     , (response)=>{
-        //     console.log(response)
-        //     if (response.didCancel) {
-        //         console.log('User cancelled image picker');
-        //       } else if (response.error) {
-        //         console.log('ImagePicker Error: ', response.error);
-        //       } else if (response.customButton) {
-        //         console.log('User tapped custom button: ', response.customButton);
-        //       } else {
-        //         // const source = { uri: response.uri };
-        //     }
-        // })
+        
+        ImagePicker.showImagePicker(
+            {
+            title:'Select Your Profile Pic',
+            }
+            , (response)=>{
+            console.log(response)
+            if (response.didCancel) {
+                console.log('User cancelled image picker');
+              } else if (response.error) {
+                console.log('ImagePicker Error: ', response.error);
+              } else if (response.customButton) {
+                console.log('User tapped custom button: ', response.customButton);
+              } else {
+                // const source = { uri: response.uri };
+            }
+        })
     }
 
     return(

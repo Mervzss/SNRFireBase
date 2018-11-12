@@ -1,10 +1,26 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
-
+import ImagePicker from 'react-native-image-picker'
 // Custom Components Imports
 import {HomeButton,DefaultBG,HeadText} from '../../components/SNRDefaults'
 
 class InitialView extends Component{
+    componentDidMount(){
+        ImagePicker.showImagePicker(
+            {
+            title:"Pick an image",
+            }
+            , (response)=>{
+            
+            if (response.didCancel) {
+                console.log('User cancelled image picker');
+              } else if (response.error) {
+                console.log('ImagePicker Error: ', response.error);
+              } else {
+                // const source = { uri: response.uri };
+            }
+        })
+    }
     render(){
         return(
             <DefaultBG  >

@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.airbnb.android.react.maps.MapsPackage;
-import com.reactnative.ivpusic.imagepicker.PickerPackage;
+
 import com.imagepicker.ImagePickerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
@@ -29,8 +29,6 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
         new MapsPackage(),
           new MainReactPackage(),
-            new MapsPackage(),
-            new PickerPackage(),
             new ImagePickerPackage(),
             new VectorIconsPackage()
       );
