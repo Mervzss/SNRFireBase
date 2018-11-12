@@ -13,3 +13,4 @@ export {InitialTextInput} from './TextInput/InitialTextInput'
 
 //Custom View
 export {ImageViewer} from './ViewHolder/ImageViewer'
+export {MapViewer} from './ViewHolder/MapViewer'

@@ -12,8 +12,8 @@ class InitialView extends Component{
                     <View style={styles.inContainer}>
 
 
-                        <HomeButton textTitle={'Log In'} iconName='md-key' inverted={true} onPress={() => this.props.navigation.navigate('Login')}/>
-                        <HomeButton textTitle={'Sign In'} iconName='md-brush' onPress={() => this.props.navigation.navigate('SignUp')} />
+                        <HomeButton textTitle={'Log In'} iconName='md-key' inverted={true} onPress={() => this.props.navigation.replace('Login')}/>
+                        <HomeButton textTitle={'Sign In'} iconName='md-brush' onPress={() => this.props.navigation.replace('SignUp')} />
 
                  </View>
 

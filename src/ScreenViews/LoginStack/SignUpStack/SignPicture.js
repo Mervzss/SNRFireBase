@@ -16,11 +16,6 @@ class SignPicture extends Component {
                 
                 <ImageViewer imageSelected={Sample}/>
 
-                <SignUpButtons
-                    middleButton={true} middleTitle={'Take a Pic'} onMidPress={() => alert('Picture Setted')}
-                    buttonBack={() => this.props.navigation.navigate('Verify')}
-                    buttonNext={() => this.props.navigation.navigate('Location')}
-                />
             </DefaultBG>
         )
     }
